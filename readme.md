@@ -16,7 +16,7 @@
 
 ## Introduction
 
-Welcome to the Software Best Practices project! This repository is dedicated to promoting and demonstrating best practices for software development. Whether you're a beginner or an experienced developer, this project aims to provide valuable insights into writing clean, maintainable, and efficient code. 
+Welcome to the Software Best Practices project! This repository is dedicated to promoting and demonstrating best practices for software development. Whether you're a beginner or an experienced developer, this project aims to provide valuable insights into writing clean, maintainable, and efficient code.
 
 ## Features
 
@@ -38,26 +38,31 @@ Before you begin, ensure you have the following prerequisite installed:
 
 ### Installation
 
-# Clone this repository to your local machine
+## Clone this repository to your local machine
+
 git clone https://github.com/HeathITLabs/BestPracticeExamples.git
 
-# Navigate to the project directory
+## Navigate to the project directory
+
 cd BestPracticeExamples
 
-# Install the project dependencies
+## Install the project dependencies
+
 npm install
 
-# Navigate to the solid-principles directory
+## Navigate to the solid-principles directory
+
 cd solid-principles
 
-# Run the Single Responsibility Principle example
+## Run the Single Responsibility Principle example
+
 node srp-example.js
 
-Contributing
+## Contributing
 We welcome contributions from the community! If you'd like to contribute to this project, please follow our Contributing Guidelines.
 
-License
+## License
 This project is licensed under the GNU General Public License (GPL) - see the LICENSE file for details.
 
-Acknowledgments
+## Acknowledgments
 Special thanks to everyone for their valuable insights.
