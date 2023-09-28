@@ -1,24 +1,33 @@
+/**
+ * solid.ts
+ * Author: J.A.Heath
+ * Company: Heath IT Labs
+ * Copyright (c) 2023 J.A.Heath
+ * This code is licensed under the GNU General Public License (GPL).
+ */
 
- //S.O.L.I.D stands for:
+/**
+ * S.O.L.I.D Programming Principles Examples in TypeScript
+ */
 
-// Single Responsibility Principle (SRP): A class should have only one reason to change.
-// Instead of combining multiple responsibilities in one class,
-// separate them into different classes like UserService and UserDatabaseService.
-// SRP Example in TypeScript
-class UserService {
-  getUsers() {
-    // Fetch users from the server
-  }
+/**
+ * Single Responsibility Principle (SRP)
+ * A class should have only one reason to change.
+ */
 
-  saveUser(user) {
-    // Save user data to the database
-  }
+ class UserService {
+  // Fetch users from the server
+  getUsers() {}
+
+  // Save user data to the database
+  saveUser(user) {}
 }
 
+/**
+ * Open/Closed Principle (OCP)
+ * Software entities (classes, modules, functions) should be open for extension but closed for modification.
+ */
 
-// Open/Closed Principle (OCP): Software entities (classes, modules, functions) should be open for extension but closed for modification.
-// We can easily add new shapes (e.g., Triangle) without modifying existing code.
-// OCP Example in TypeScript
 class Shape {
   area() {}
 }
@@ -43,9 +52,11 @@ class Circle extends Shape {
   }
 }
 
+/**
+ * Liskov Substitution Principle (LSP)
+ * Subtypes must be substitutable for their base types without altering the correctness of the program.
+ */
 
-// Liskov Substitution Principle (LSP): Subtypes must be substitutable for their base types without altering the correctness of the program.
-// LSP Example in TypeScript
 class Bird {
   fly() {}
 }
@@ -71,10 +82,11 @@ const penguin = new Penguin();
 makeBirdFly(sparrow); // Works fine
 makeBirdFly(penguin); // Works fine, even though penguins don't fly.
 
+/**
+ * Interface Segregation Principle (ISP)
+ * Clients should not be forced to depend on interfaces they do not use.
+ */
 
-// Interface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use.
-// Instead of having a single monolithic interface, break it down into smaller interfaces.
-// ISP Example in TypeScript
 interface Worker {
   work();
   eat();
@@ -100,33 +112,28 @@ class Waiter implements Worker {
   }
 }
 
-// Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. 
-//Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
-// DIP Example in TypeScript
+/**
+ * Dependency Inversion Principle (DIP)
+ * High-level modules should not depend on low-level modules. Both should depend on abstractions.
+ * Abstractions should not depend on details. Details should depend on abstractions.
+ */
+
 interface Switchable {
   operate();
 }
 
-class LightBulb {
-  turnOn() {}
-  turnOff() {}
-}
+class LightBulb implements Switchable {
+  turnOn() {
+    // Turn on the light bulb
+  }
 
-class Switch {
-  private bulb: LightBulb;
-
-  constructor(bulb: LightBulb) {
-    this.bulb = bulb;
+  turnOff() {
+    // Turn off the light bulb
   }
 
   operate() {
-    // Toggle the bulb
+    // Implement the operate method for LightBulb
   }
-}
-
-// Instead of having Switch directly depend on LightBulb, use an interface to abstract the dependency.
-interface Switchable {
-  operate();
 }
 
 class BetterSwitch {
@@ -143,5 +150,4 @@ class BetterSwitch {
 
 const bulb = new LightBulb();
 const switchButton = new BetterSwitch(bulb);
-
-// Now, the switch can work with any device that implements the Switchable interface, not just LightBulb.
+switchButton.operate();
