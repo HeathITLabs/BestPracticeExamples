@@ -38,23 +38,23 @@ Before you begin, ensure you have the following prerequisite installed:
 
 ### Installation
 
-## Clone this repository to your local machine
+#### Clone this repository to your local machine
 
 git clone https://github.com/HeathITLabs/BestPracticeExamples.git
 
-## Navigate to the project directory
+#### Navigate to the project directory
 
 cd BestPracticeExamples
 
-## Install the project dependencies
+#### Install the project dependencies
 
 npm install
 
-## Navigate to the solid-principles directory
+#### Navigate to the solid-principles directory
 
 cd solid-principles
 
-## Run the Single Responsibility Principle example
+#### Run the Single Responsibility Principle example
 
 node srp-example.js
 
